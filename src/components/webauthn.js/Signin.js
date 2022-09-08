@@ -16,17 +16,13 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let attResp;
-    try {
-      const { admissionId, email } = inputs;
-      console.log(admissionId, email);
-      if (!admissionId || !email) {
-        alert("Name or username is missing!");
-        return;
-      }
-    } catch (error) {
-      alert(error);
-      console.log(error);
+    const { admissionId, email } = inputs;
+    console.log(admissionId, email);
+    if (!admissionId || !email) {
+      alert("Name or username is missing!");
+      return;
     }
+
     try {
       const resp = await fetch(
         "http://localhost:5000/generate-registration-options",
