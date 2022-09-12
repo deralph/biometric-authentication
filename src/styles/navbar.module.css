@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+  background: rgba(225, 225, 225, 0.1);
+  align-items: center;
+  font-family: sans-serif;
+}
+.normal,
+.sidenav {
+  display: flex;
+  list-style-type: none;
+  font-size: 20px;
+}
+.nav ul li {
+  padding: 10px 20px;
+  text-transform: capitalize;
+}
+.bar {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .sidenav {
+    right: 0;
+  }
+  .bar {
+    display: block;
+    font-size: 30px;
+  }
+  .normal,
+  .sidenav {
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    background: #eee;
+    padding: 20px;
+    transition: 1s;
+    list-style: none;
+  }
+  .normal {
+    right: -300px;
+  }
+  .nav ul li {
+    margin-top: 30px;
+  }
+}

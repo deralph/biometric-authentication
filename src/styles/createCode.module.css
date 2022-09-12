@@ -1,0 +1,30 @@
+.section {
+  background: greenyellow;
+  padding: 15px;
+  font-family: sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+.form {
+  max-width: 500px;
+  width: 100%;
+  background: gainsboro;
+  height: auto;
+  /* display: grid; */
+  /* place-content: center; */
+  padding: 30px;
+  margin: 0;
+}
+.form h3 {
+  text-align: center;
+  text-transform: capitalize;
+}
+.form input {
+  padding: 13px;
+  border: none;
+  font-size: 17px;
+  outline: none;
+  width: 100%;
+  margin: 20px auto 0;
+}

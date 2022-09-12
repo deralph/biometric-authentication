@@ -1,0 +1,105 @@
+.section {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+.right {
+  background: #197e37;
+  flex-basis: 40%;
+  display: grid;
+  place-content: center;
+  width: 100%;
+}
+.left {
+  background: url("../../public/student.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-basis: 60%;
+  text-align: center;
+}
+.left div {
+  width: 80%;
+  height: 80%;
+  display: grid;
+  background: rgba(225, 225, 225, 0.4);
+  place-content: center;
+  /* color: aliceblue; */
+  margin: 7% auto;
+}
+.left div h2 {
+  font-size: 38px;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 28px 0;
+}
+.left div p {
+  font-size: 25px;
+}
+form {
+  height: 60%;
+  margin: 10%;
+}
+.form h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 10%;
+}
+.form input {
+  outline: none;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  border: none;
+  /* background: rgba(225, 225, 225, 01); */
+}
+.book {
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+}
+/* .form input[type="submit"] { */
+/* } */
+
+@media (max-width: 1000px) {
+  .left div h2 {
+    font-size: 25px;
+    padding: 20px;
+  }
+  .left div p {
+    padding: 0 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .section {
+    background: url("../../public/student.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    background: rgba(225, 225, 225, 0.4);
+    display: grid;
+    place-content: center;
+    width: 80%;
+    margin: auto;
+  }
+  .form {
+    margin: 5%;
+  }
+  .form h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .form input {
+    font-size: 15px;
+  }
+}
