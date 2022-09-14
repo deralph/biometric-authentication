@@ -78,6 +78,7 @@ form {
   .section {
     background: url("../../public/student.jpg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: grid;
     place-content: center;
