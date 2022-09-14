@@ -1,9 +1,12 @@
 .section {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   font-family: sans-serif;
   color: rgba(0, 0, 0, 0.7);
+}
+.section img {
+  display: none;
 }
 .right {
   background: #8ac49c;
@@ -13,12 +16,15 @@
   width: 100%;
 }
 .left {
-  background: url("../../public/student.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   flex-basis: 60%;
   text-align: center;
+}
+.left img {
+  position: absolute;
+  height: 100vh;
+  width: 70vw;
+  display: block;
+  z-index: -1;
 }
 .left div {
   width: 80%;
@@ -26,7 +32,6 @@
   display: grid;
   background: rgba(225, 225, 225, 0.4);
   place-content: center;
-  /* color: aliceblue; */
   margin: 7% auto;
 }
 .left div h2 {
@@ -55,14 +60,11 @@ form {
   text-transform: capitalize;
   margin-bottom: 40px;
   border: none;
-  /* background: rgba(225, 225, 225, 01); */
 }
 .book {
   font-size: 50px;
   color: #fff;
 }
-/* .form input[type="submit"] { */
-/* } */
 
 @media (max-width: 1000px) {
   .left div h2 {
@@ -76,11 +78,15 @@ form {
 }
 @media (max-width: 800px) {
   .section {
-    background: url("../../public/student.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
     display: grid;
     place-content: center;
+  }
+  .section img {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
   }
   .left {
     display: none;
