@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/home.module.css";
 import { fetchRequest, regError } from "../../functions/endpointsRoute";
+import { startAuthentication } from "@simplewebauthn/browser";
 
 const Form = ({ attendance, admin }) => {
   const [message, setMessage] = useState("");
@@ -39,14 +40,21 @@ const Form = ({ attendance, admin }) => {
         class_code,
       };
       const { returnData: genAuthOptData, err: genAuthOptError } =
-        await fetchRequest("post", "bio/generate-registration-options", body);
+        await fetchRequest("post", "bio/generate-authentication-options", body);
       console.log(genAuthOptData);
       if (genAuthOptError) {
         setMessage("an error ocured unable to take attendance");
         console.log(genAuthOptError);
       }
+      let asseResp;
+      try {
+        asseResp = await startAuthentication(genAuthOptData);
+      } catch (error) {
+        console.log(error);
+      }
+      console.log(asseResp);
       const { returnData: verifyAuthOptData, err: verifyAuthOptError } =
-        await fetchRequest("post", "bio/verify-registration", genAuthOptData);
+        await fetchRequest("post", "bio/verify-authentication", asseResp);
       if (verifyAuthOptError) {
         setMessage("an error ocured unable to take attendance");
         console.log(verifyAuthOptError);

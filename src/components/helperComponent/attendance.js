@@ -43,4 +43,37 @@ const attendance = [
   },
 ];
 
+export const students = [
+  {
+    admissionId: "admin123",
+    email: "testing@gmail.com",
+    attended: "7",
+  },
+  {
+    admissionId: "admin123",
+    email: "testing@gmail.com",
+    attended: "7",
+  },
+  {
+    admissionId: "admin123",
+    email: "testing@gmail.com",
+    attended: "7",
+  },
+  {
+    admissionId: "admin123",
+    email: "testing@gmail.com",
+    attended: "7",
+  },
+  {
+    admissionId: "admin123",
+    email: "testing@gmail.com",
+    attended: "7",
+  },
+  {
+    admissionId: "admin123",
+    email: "testing@gmail.com",
+    attended: "7",
+  },
+];
+
 export default attendance;

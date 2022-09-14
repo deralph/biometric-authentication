@@ -8,25 +8,38 @@ const Course = ({
   class_code,
   closed,
   createdAt,
+  admissionId,
+  email,
+  attended,
 }) => {
   return (
     <div className={styles.course}>
       <p>
-        <span className={styles.smallview}>Title:</span>
-        {title}
+        <span className={styles.smallview}>
+          {email ? "AdmissionId" : "Title"}:
+        </span>
+        {email ? admissionId : title}
       </p>
       <p>
-        <span className={styles.smallview}> Teacher:</span>
-        {teacher}
+        <span className={styles.smallview}>
+          {" "}
+          {email ? "email" : "Teacher"}:
+        </span>
+        {email ? email : teacher}
       </p>
       <p>
-        <span className={styles.smallview}> course code:</span>
-        {course_code}
+        <span className={styles.smallview}>
+          {" "}
+          {email ? "class attended" : "course code"}:
+        </span>
+        {email ? attended : course_code}
       </p>
-      <p>
-        <span className={styles.smallview}> Date:</span>
-        {createdAt}
-      </p>
+      {!email && (
+        <p>
+          <span className={styles.smallview}> Date:</span>
+          {createdAt}
+        </p>
+      )}
       {class_code && (
         <>
           <p>

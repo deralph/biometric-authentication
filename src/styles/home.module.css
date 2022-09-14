@@ -6,7 +6,7 @@
   color: rgba(0, 0, 0, 0.7);
 }
 .right {
-  background: #197e37;
+  background: #8ac49c;
   flex-basis: 40%;
   display: grid;
   place-content: center;
@@ -16,6 +16,7 @@
   background: url("../../public/student.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   flex-basis: 60%;
   text-align: center;
 }
@@ -57,7 +58,6 @@ form {
   /* background: rgba(225, 225, 225, 01); */
 }
 .book {
-  text-align: center;
   font-size: 50px;
   color: #fff;
 }

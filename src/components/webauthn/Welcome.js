@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { registerBio } from "../../functions/endpointsRoute";
 // import { Link } from "react-router-dom";
 import styles from "../../styles/welcome.module.css";
@@ -14,12 +15,12 @@ const Welcome = () => {
           you using your biometric and being present in the class to know the
           cclass code
         </p>
-        <div className={styles.links}>
-          <a href="/" onClick={registerBio}>
-            Register Biometric
-          </a>
-          <a href="/">Take Attendance</a>
-        </div>
+        <ul className={styles.links}>
+          <li onClick={registerBio}>Register Biometric</li>
+          <li>
+            <Link to="/take-attendance">Take Attendance</Link>
+          </li>
+        </ul>
       </div>
     </section>
   );

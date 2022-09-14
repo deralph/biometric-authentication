@@ -12,6 +12,7 @@ const Home = ({ attendance, admin }) => {
             <p style={{ display: "flex", justifyContent: "center" }}>
               <FaBookOpen className={styles.book} />
             </p>
+            
             <h2>attendance management system</h2>
             <p>
               Easy and reliable system for taking attendance with the use of

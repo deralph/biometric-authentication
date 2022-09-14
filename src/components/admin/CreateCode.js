@@ -41,11 +41,12 @@ const Form = ({ attendance, admin }) => {
       alert("enter correct course code");
     } else if (class_code !== confirm_class) {
       alert("enter correct class code");
+    } else {
+      const body = { title, teacher, course_code, class_code };
+      const { returnData, err } = fetchRequest("post", "class", body);
+      if (err) alert("an error occured, try again");
+      console.log(returnData, err);
     }
-    const body = { title, teacher, course_code, class_code };
-    const { returnData, err } = fetchRequest("post", "class", body);
-    if (err) alert("an error occured, try again");
-    console.log(returnData, err);
   };
 
   return (
